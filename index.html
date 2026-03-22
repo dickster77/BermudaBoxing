@@ -7,23 +7,31 @@ HTML
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Gallery</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .img-thumbnail-custom {
-            max-width: 150px;
-            height: auto;
-            border-radius: 8px;
-        }
-        body {
-            background-color: #f8f9fa;
-            padding-top: 50px;
-        }
-        .table-container {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-    </style>
+<style>
+  /* 1. Remove all default spacing from the page itself */
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents double scrollbars */
+  }
+
+  /* 2. Force the table to expand to the full browser window */
+  table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse; /* Removes gaps between cells */
+    table-layout: fixed;       /* Optional: Forces columns to stay proportional */
+  }
+
+  /* 3. Ensure cells expand to fill the vertical space */
+  td, th {
+    border: 1px solid black; /* So you can see the boundaries */
+    text-align: center;
+    vertical-align: middle;
+  }
+</style>
 </head>
 <body>
 
